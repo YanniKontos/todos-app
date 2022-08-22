@@ -19,12 +19,12 @@ todoButton.addEventListener('click', (e) => {
     }
 
     const todoList = `
-    <li class='text-output fs-3'> <span id='spanTxt'>${todoInput.value}</span> 
+    <li class='text-output fs-3'> 
+    <span id='spanTxt'>${todoInput.value}</span> 
     <button class='input-btn btn btn-danger float-md-end' onclick="removeTodoItem(event)"><i class="bi bi-trash-fill"></i></button>
     <button class='input-btn btn btn-success float-md-end' onclick='completedTodoItem(event)'><i class="bi bi-check2"></i></button>
     </li>
     `
-    
     listItems.innerHTML += todoList;
     todoInput.value = '';
 });
@@ -33,12 +33,11 @@ function removeTodoItem(event) {
     event.preventDefault();
     let targetValue = event.target;
     targetValue.parentElement.remove();
-    
 };
 
 function completedTodoItem(event) {
     event.preventDefault();
     let targetValue = event.target;
-    let inputTxt = targetValue.parentElement.childNodes[0].nextSibling.innerText
+    let inputTxt = targetValue.parentElement.childNodes[0].nextSibling.innerText;
     targetValue.parentElement.innerHTML = `${inputTxt} - Task Completed `;
 };
