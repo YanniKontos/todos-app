@@ -1,0 +1,57 @@
+:root {
+    --max-width: 100%;
+    --max-height: 100vh;
+    --text-color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: var(--max-width);
+    height: var(--max-height);
+    background-color: #0080359c;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: var(--max-height);
+}
+
+.wrapper-1 {
+    width: 700px;
+    height: 650px;
+    overflow-y: scroll;
+}
+
+form {
+    width: var(--max-width);
+    height: 55vh;
+}
+
+.inputs {
+    display: flex;
+    gap: 1rem;
+}
+
+.list-items {
+    width: 100%;
+}
+
+.text-output {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.input-btn {
+    margin: 0 0.2em;
+}
+
+.input-btn > i {
+    pointer-events: none;
+}
